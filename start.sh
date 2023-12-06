@@ -1,2 +1,2 @@
 #!/bin/bash
-python ./ignite.py
+python ./main.py

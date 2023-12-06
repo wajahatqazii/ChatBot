@@ -1,50 +1,34 @@
-# AI Junior Developer Test 
-Welcome! You’ve stepped into the arena – now show us what you’ve got! 
+# AI Junior Developer (Intern) Test 
+Welcome! and thank you for applying! 
 
-## Mission
-You're not just fiddling with code here; you're architecting the future. Your battleground? An AI app framework crying out for a brain.
+## Requirement
+The current project has the blueprint structure of an AI App. 
 
-Your task: Forge an 💬NLP chatbot that doesn’t just answer, but masters science-related questions.
+Your mission is to implement an 💬NLP chatbot **answering questions about science**. 
 
-Immerse yourself in the main.py file. Your battlefield is the execute function. Time to unleash your genius:
+You will add your logic to the `main.py` file inside the `execute` function. 
 ```python
-############################################################
-# Callback function called on each execution pass
-############################################################
-def execute(request: SimpleText, ray: Ray, state: State) -> SimpleText:
+def execute(request: SimpleText, ray: OpenfabricExecutionRay) -> SimpleText:
     output = []
-    for text in request.text:
-        # TODO Add code here
-        response = 'Hello!' <<-- Here you add the magic 
+    for text in request.text:        
+        response = '' # <<< --Your magic goes here
         output.append(response)
 
-    return SchemaUtil.create(SimpleText(), dict(text=output))
+    return SimpleText(dict(text=output))
 ```
-## Ground Rules
-Step up with any arsenal (read: libraries or packages) you believe in, but remember:
-* 👎 External services like chatGPT are off-limits. Stand on your own.
-* 👎 Plagiarism is for the weak. Forge your own path.
-* 👎 A broken app equals failure. Non-negotiable.
+## Constraints and restrictions
+You are free to use any package or library you see feet as long as you follow these rules:
+* 👎 You can't call any external service (e.g. chatGPT) 
+* 👎 You can't copy and paste from other peoples work 
 
-## Deployment Options
+## Run
 The application can be executed in two different ways:
 * locally by running the `start.sh` 
 * on in a docker container using `Dockerfile` 
 
-## Proving Your Mettle
-* Submit your masterpiece on GitHub. We want the link within **1 week, not a second more**.
-* Go the extra mile and include a video where you walk us through your solution, showcasing 
-it in live action. 
-* We want to see not just what you've created but also how you envisioned and executed it
+## Submission
+Your solution must be uploaded on GitHub, and submit us the link in **max 1 week** after receiving the task.
 
-
-## This Is It
-We're not just evaluating a project; we're judging your potential to revolutionize our 
-landscape. A half-baked app won’t cut it.
-
-We're zeroing in on:
-* 👍 Exceptional documentation.
-* 👍 Code that speaks volumes.
-* 👍 Inventiveness that dazzles.
-* 👍 A problem-solving beast.
-* 👍 Unwavering adherence to the brief
+## Note
+Keep in mind that this is the project that will be used to evaluate your skills.
+So we do expect you to make sure that the app is fully functional and doesn't have any obvious missing pieces.
